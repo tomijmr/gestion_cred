@@ -6,7 +6,7 @@ if (isset($_SESSION['usuario_id'])) {
     exit;
 }
 
-$error = "Hubo un problema al iniciar sesión. Por favor, inténtelo de nuevo.";
+$error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
