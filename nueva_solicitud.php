@@ -34,55 +34,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Nueva Solicitud</title>
-    <link rel="stylesheet" href="assets/style.css">
-        <style>
+    <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-}
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+    }
 
-.container {
-    width: 90%;
-    max-width: 700px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
+    .container {
+        width: 90%;
+        max-width: 700px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-input, button {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-}
+    input[type="text"], button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-}
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
 
-.error {
-    color: red;
-}
+    .financieras {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+    .financiera-item {
+        background: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+    }
 
-table, th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-.pendiente { color: orange; font-weight: bold; }
-.parcial { color: blue; font-weight: bold; }
-.revisado { color: green; font-weight: bold; }
-
-</style>
+    .financiera-item input {
+        margin-right: 10px;
+    }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -93,15 +95,17 @@ table, th, td {
         <input type="text" name="telefono_cliente" placeholder="Teléfono" required>
 
         <h4>Seleccionar Financieras:</h4>
-        <label><input type="checkbox" name="financieras[]" value="Banco Macro"> Banco Macro</label><br>
-        <label><input type="checkbox" name="financieras[]" value="Banco Columbia"> Banco Columbia</label><br>
-        <label><input type="checkbox" name="financieras[]" value="Banco Galicia"> Banco Galicia</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" Argenpesos"> Argenpesos</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" Banco Santander"> Banco Santander</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" Rapicuotas"> Rapicuotas</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" Cuota Red"> Cuota Red</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" Tarjeta Naranja"> Tarjeta Naranja</label><br>
-        <label><input type="checkbox" name="financieras[]" value=" CuotaYa!"> CuotaYa!</label><br>
+        <div class="financieras">
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Banco Macro">Banco Macro</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Banco Columbia">Banco Columbia</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Banco Galicia">Banco Galicia</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Argenpesos">Argenpesos</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Banco Santander">Banco Santander</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Rapicuotas">Rapicuotas</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Cuota Red">Cuota Red</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="Tarjeta Naranja">Tarjeta Naranja</label>
+            <label class="financiera-item"><input type="checkbox" name="financieras[]" value="CuotaYa!">CuotaYa!</label>
+        </div>
 
         <button type="submit">Enviar Solicitud</button>
     </form>
