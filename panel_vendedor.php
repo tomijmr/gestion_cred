@@ -135,7 +135,7 @@ th, td {
     padding: 5px 3px;
   }
 }
-
+</style>
 </head>
 <body>
 <div class="container">
