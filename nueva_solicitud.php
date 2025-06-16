@@ -96,6 +96,12 @@ table, th, td {
         <label><input type="checkbox" name="financieras[]" value="Banco Macro"> Banco Macro</label><br>
         <label><input type="checkbox" name="financieras[]" value="Banco Columbia"> Banco Columbia</label><br>
         <label><input type="checkbox" name="financieras[]" value="Banco Galicia"> Banco Galicia</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" Argenpesos"> Argenpesos</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" Banco Santander"> Banco Santander</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" Rapicuotas"> Rapicuotas</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" Cuota Red"> Cuota Red</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" Tarjeta Naranja"> Tarjeta Naranja</label><br>
+        <label><input type="checkbox" name="financieras[]" value=" CuotaYa!"> CuotaYa!</label><br>
 
         <button type="submit">Enviar Solicitud</button>
     </form>
