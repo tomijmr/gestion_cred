@@ -2,43 +2,78 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Inicio</title>
+    <title>Inicio - Gestión de Créditos</title>
     <style>
-        /* Estilos para centrar el contenido */
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f2f5, #dfe6e9);
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
-        .menu {
-            text-align: center;
+
+        .container {
             background: white;
-            padding: 40px 60px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 50px 80px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
         }
-        .menu a {
-            display: inline-block;
+
+        .logo {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+
+        .btn-login {
             background: #007bff;
             color: white;
             text-decoration: none;
             padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 6px;
+            font-size: 20px;
+            border-radius: 8px;
             transition: background 0.3s ease;
+            display: inline-block;
         }
-        .menu a:hover {
-            background:rgb(197, 43, 43);
+
+        .btn-login:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <a href="login.php">Iniciar sesión</a>
+
+    <div class="container">
+        <!-- Aquí podes poner tu logo -->
+       <center> <img src="assets/logo.png" alt="Logo Empresa" class="logo" onerror="this.style.display='none'"></center>
+
+        <a href="login.php" class="btn-login">Iniciar sesión</a>
+
+        <footer>
+            Este sistema fue realizado por 
+            <a href="https://www.linkedin.com/in/tomas-canavidez" target="_blank">Tomás Canavidez</a>
+        </footer>
     </div>
+
 </body>
 </html>
