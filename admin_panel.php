@@ -19,6 +19,55 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <title>Panel Administrativo</title>
     <style>
+        /* Reinicio básico para evitar márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal con ancho máximo y centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Texto e imágenes flexibles */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tipografía responsiva usando unidades relativas */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Diseño flexible con flexbox para secciones */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.flex-item {
+  flex: 1 1 300px; /* crece, encoge, base de 300px */
+}
+
+/* Media queries para ajustar en pantallas pequeñas */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+}
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
