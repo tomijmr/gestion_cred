@@ -7,7 +7,7 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] != 'administrativo') {
 }
 
 if (!isset($_GET['id'])) {
-    header("Location: panel_admin.php");
+    header("Location: admin_panel.php");
     exit;
 }
 
