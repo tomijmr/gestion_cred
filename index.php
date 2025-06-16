@@ -32,7 +32,7 @@
             transition: background 0.3s ease;
         }
         .menu a:hover {
-            background: #0056b3;
+            background:rgb(197, 43, 43);
         }
     </style>
 </head>
