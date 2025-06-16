@@ -21,100 +21,121 @@ $res = $stmt->get_result();
     <title>Mis Solicitudes</title>
     <link rel="stylesheet" href="assets/style.css">
     <style>
-        /* Reinicio básico para evitar márgenes y paddings por defecto */
+       /* Reinicio básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Contenedor principal con ancho máximo y centrado */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Texto e imágenes flexibles */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Tipografía responsiva usando unidades relativas */
+/* Body y contenedor */
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
   font-size: 16px;
   line-height: 1.5;
+  padding: 20px 10px;
 }
 
-/* Diseño flexible con flexbox para secciones */
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.flex-item {
-  flex: 1 1 300px; /* crece, encoge, base de 300px */
+/* Enlaces */
+a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin-right: 15px;
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
-/* Media queries para ajustar en pantallas pequeñas */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Inputs y botones */
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Tabla base */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+/* Estados con colores */
+.pendiente { color: orange; font-weight: bold; }
+.parcial { color: blue; font-weight: bold; }
+.revisado, .aprobado { color: green; font-weight: bold; }
+.rechazado { color: red; font-weight: bold; }
+
+/* RESPONSIVE: para pantallas menores a 768px */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
   }
 
-  .flex-row {
-    flex-direction: column;
+  /* Enlaces en bloque para mejor toque táctil */
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* La tabla se convierte en bloque para scroll horizontal */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Celdas con padding reducido */
+  th, td {
+    padding: 6px 5px;
+    font-size: 0.85rem;
   }
 }
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f2f5;
-    }
+/* RESPONSIVE: para pantallas muy pequeñas (celulares) */
+@media (max-width: 480px) {
+  /* Disminuir más el tamaño de fuente */
+  body {
+    font-size: 13px;
+  }
 
-    .container {
-        width: 90%;
-        max-width: 900px;
-        margin: 40px auto;
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-    }
+  th, td {
+    font-size: 0.75rem;
+    padding: 5px 3px;
+  }
+}
 
-    input, button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0 15px 0;
-    }
-
-    button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    table, th, td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: center;
-        vertical-align: top;
-    }
-
-    .pendiente { color: orange; font-weight: bold; }
-    .parcial { color: blue; font-weight: bold; }
-    .revisado { color: green; font-weight: bold; }
-    .aprobado { color: green; font-weight: bold; }
-    .rechazado { color: red; font-weight: bold; }
-    </style>
 </head>
 <body>
 <div class="container">
